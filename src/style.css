@@ -41,7 +41,7 @@ header {
   color: white;
   border: none;
   border-radius: 6px;
-  padding: 16px 28px;
+  padding: 16px 40px;
   font-size: 16px;
   cursor: pointer;
   transition: background 0.2s ease;
@@ -55,7 +55,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .current-city {
@@ -68,7 +68,7 @@ header {
 .current-details {
   font-size: 16px;
   line-height: 1.6;
-  color: #888;
+  color: #a0a0a0;
   margin: 0;
 }
 
@@ -83,8 +83,8 @@ header {
 }
 
 .current-temperature-icon {
-  font-size: 44px;
-  margin-right: 10px;
+  font-size: 50px;
+  margin-right: 12px;
 }
 
 .current-temperature-value {

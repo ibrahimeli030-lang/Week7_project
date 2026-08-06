@@ -22,7 +22,7 @@ function updateTime() {
   currentDateElement.innerHTML = formatDate(now);
 }
 
-function getWeatherIcon(condition) {
+function getWeatherIcon(iconCode) {
   const icons = {
     "clear-sky-day": "☀️",
     "clear-sky-night": "🌙",
@@ -44,7 +44,7 @@ function getWeatherIcon(condition) {
     "mist-night": "🌫️",
   };
 
-  return icons[condition] || "☀️";
+  return icons[iconCode] || "☀️";
 }
 
 function displayWeatherData(response) {
@@ -60,14 +60,14 @@ function displayWeatherData(response) {
   const description = response.data.condition.description;
   const humidity = response.data.temperature.humidity;
   const wind = response.data.wind.speed;
-  const iconCondition = response.data.condition.icon;
+  const iconCode = response.data.condition.icon;
 
   temperatureElement.innerHTML = temperature;
   cityElement.innerHTML = city;
   descriptionElement.innerHTML = description;
   humidityElement.innerHTML = `${humidity}%`;
   windElement.innerHTML = `${wind}km/h`;
-  iconElement.innerHTML = getWeatherIcon(iconCondition);
+  iconElement.innerHTML = getWeatherIcon(iconCode);
 }
 
 function searchCity(city) {
