@@ -3,69 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="src/styles.css" />
-    <title>My weather application</title>
   </head>
   <body>
-    <div class="weather-app">
-      <header>
-        <form id="search-form">
+    <div class="app-container">
+      <main class="weather-card">
+        <form class="search-form" id="search-form">
           <input
-            type="search"
-            placeholder="Enter a city.."
-            required
+            type="text"
+            id="city-input"
             class="search-input"
-            id="search-input"
+            placeholder="Enter a city.."
+            autocomplete="off"
+            required
           />
-          <input type="submit" value="Search" class="search-button" />
+          <button type="submit" class="search-btn">Search</button>
         </form>
-      </header>
-      <main>
-        <div class="current-weather">
-          <div>
-            <h1 class="current-city" id="current-city">Paris</h1>
-            <p class="current-details">
-              <span id="current-date"></span>,
-              <span id="weather-description">clear sky</span> <br />
-              Humidity: <strong id="humidity">36%</strong>, Wind:
-              <strong id="wind">2.89km/h</strong>
-            </p>
-          </div>
-          <div class="current-temperature">
-            <span class="current-temperature-icon" id="weather-icon">☀️</span
-            ><span class="current-temperature-value" id="current-temperature"
-              >27</span
-            ><span class="current-temperature-unit">°C</span>
+
+        <div class="weather-content" id="weather-content">
+          <div class="weather-header">
+            <div class="weather-location">
+              <h1 class="city-name" id="city-name">Paris</h1>
+              <p class="weather-meta">
+                <span id="date-time">Monday 6:59</span>,
+                <span id="description">overcast clouds</span>
+              </p>
+              <p class="weather-stats">
+                Humidity: <strong id="humidity">42%</strong>, Wind:
+                <strong id="wind">5.66km/h</strong>
+              </p>
+            </div>
+            <div class="weather-display">
+              <div class="icon-wrapper" id="icon-wrapper">
+                <!-- SVG icon injected by JS -->
+              </div>
+              <div class="temperature-wrapper">
+                <span class="temperature" id="temperature">28</span>
+                <span class="unit">°C</span>
+              </div>
+            </div>
           </div>
         </div>
       </main>
-      <footer>
+
+      <footer class="footer">
         <p>
           This project was coded by
           <a
-            href="https://github.com/ibrahimeli030-lang/Week7_project"
+            href="https://github.com/ibrahimeli030-lang"
             target="_blank"
+            rel="noopener noreferrer"
             >Ojochide Ibrahim</a
           >, is
           <a
             href="https://github.com/ibrahimeli030-lang/Week7_project"
             target="_blank"
+            rel="noopener noreferrer"
             >open-sourced on GitHub</a
           >
           and
-          <a href="https://myweek7pr.netlify.app" target="_blank"
+          <a
+            href="https://myweek7pr.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
             >hosted on Netlify</a
-          >
+          >.
         </p>
       </footer>
     </div>
+
+    <script src="index.js"></script>
   </body>
-  <script src="src/index.js"></script>
 </html>
