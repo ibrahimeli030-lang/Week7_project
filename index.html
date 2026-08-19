@@ -3,82 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <title>Weather</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
   </head>
   <body>
-    <div class="app-container">
-      <main class="weather-card">
-        <form class="search-form" id="search-form">
-          <input
-            type="text"
-            id="city-input"
-            class="search-input"
-            placeholder="Enter a city.."
-            autocomplete="off"
-            required
-          />
-          <button type="submit" class="search-btn">Search</button>
-        </form>
+    <div class="card">
+      <div class="search-row">
+        <input
+          id="cityInput"
+          type="text"
+          placeholder="Enter a city.."
+          autocomplete="off"
+        />
+        <button id="searchBtn">Search</button>
+      </div>
 
-        <div class="weather-content" id="weather-content">
-          <div class="weather-header">
-            <div class="weather-location">
-              <h1 class="city-name" id="city-name">Paris</h1>
-              <p class="weather-meta">
-                <span id="date-time">Monday 6:59</span>,
-                <span id="description">overcast clouds</span>
-              </p>
-              <p class="weather-stats">
-                Humidity: <strong id="humidity">42%</strong>, Wind:
-                <strong id="wind">5.66km/h</strong>
-              </p>
-            </div>
-            <div class="weather-display">
-              <div class="icon-wrapper" id="icon-wrapper">
-                <!-- SVG icon injected by JS -->
-              </div>
-              <div class="temperature-wrapper">
-                <span class="temperature" id="temperature">28</span>
-                <span class="unit">°C</span>
-              </div>
-            </div>
+      <hr />
+
+      <div id="result">
+        <div class="weather-body">
+          <div class="placeholder">
+            Search for a city to see the current weather.
           </div>
         </div>
-      </main>
+      </div>
 
-      <footer class="footer">
-        <p>
-          This project was coded by
-          <a
-            href="https://github.com/ibrahimeli030-lang"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Ojochide Ibrahim</a
-          >, is
-          <a
-            href="https://github.com/ibrahimeli030-lang/Week7_project"
-            target="_blank"
-            rel="noopener noreferrer"
-            >open-sourced on GitHub</a
-          >
-          and
-          <a
-            href="https://myweek7pr.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >hosted on Netlify</a
-          >.
-        </p>
-      </footer>
+      <hr />
+
+      <div class="footer-note">
+        This project was coded by
+        <a href="#" target="_blank" rel="noopener">Ojochide Ibrahim</a>, is
+        <a
+          href="https://github.com/ibrahimeli030-lang/Week7_project"
+          target="_blank"
+          rel="noopener"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a href="https://myweek7pr.netlify.app/" target="_blank" rel="noopener"
+          >hosted on Netlify</a
+        >
+      </div>
     </div>
 
-    <script src="index.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
